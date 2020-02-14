@@ -1,5 +1,5 @@
 import test from 'tape';
-import { hello } from '.';
+import { hello } from '../src/.';
 
 test('hello() should return correctly', t => {
     const result = hello();

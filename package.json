@@ -6,8 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "test": "ts-node node_modules/tape/bin/tape src/**/*.ts",
-    "test:watch": "ts-node node_modules/tape-watch/bin/tape-watch src/**/*.ts",
+    "test": "ts-node node_modules/tape/bin/tape tests/**/*.test.ts",
+    "test:watch": "ts-node node_modules/tape-watch/bin/tape-watch tests/**/*.test.ts",
     "build": "tsc"
   },
   "repository": {
