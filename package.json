@@ -40,8 +40,6 @@
     "tape": "^4.11.0",
     "tape-watch": "^2.3.0",
     "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.3"
   },
   "dependencies": {

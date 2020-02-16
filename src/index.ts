@@ -1,2 +1,2 @@
-export const hello = () => 'Hello World!'
+export const hello = (): string => 'Hello World!'
 console.log(hello())
