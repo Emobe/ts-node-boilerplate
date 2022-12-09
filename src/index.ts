@@ -1,2 +1,3 @@
-export const hello = (): string => 'Hello World!'
-console.log(hello())
+import HelloWorld from './HelloWorld';
+
+console.log(HelloWorld());
