@@ -1,6 +1,6 @@
 {
   "name": "ts-node-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Typescript boilerplate using ts-node and tape for testing",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,9 @@
     "test:watch": "jest --watch",
     "build": "pnpm run clean-build && tsc",
     "clean-build": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=14 < 18"
   },
   "repository": {
     "type": "git",
