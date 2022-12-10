@@ -1,15 +1,19 @@
 {
   "name": "ts-node-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Typescript boilerplate using ts-node and tape for testing",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node dist/src/index.js",
     "dev": "nodemon",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "test": "ts-node node_modules/tape/bin/tape tests/**/*.test.ts",
-    "test:watch": "ts-node node_modules/tape-watch/bin/tape-watch tests/**/*.test.ts",
-    "build": "tsc"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "pnpm run clean-build && tsc",
+    "clean-build": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=14 < 18"
   },
   "repository": {
     "type": "git",
@@ -28,24 +32,24 @@
   },
   "homepage": "https://github.com/emobe/ts-boilerplate#readme",
   "devDependencies": {
-    "@types/node": "^13.7.7",
-    "@types/tape": "^4.2.34",
-    "@typescript-eslint/eslint-plugin": "^2.21.0",
-    "@typescript-eslint/parser": "^2.21.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "nodemon": "^2.0.2",
-    "prettier": "^1.19.1",
-    "sinon": "^9.0.0",
-    "tape": "^4.13.0",
-    "tape-watch": "^2.3.0",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.8.3"
+    "@types/node": "^18.11.12",
+    "@types/tape": "^4.13.2",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "@types/jest": "^29.2.4",
+    "ts-jest": "^29.0.3"
   },
   "dependencies": {
-    "tsconfig-paths": "^3.9.0"
+    "tsconfig-paths": "^4.1.1"
   }
 }
